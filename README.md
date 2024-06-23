@@ -9,12 +9,9 @@ Here is the sequence diagram illustrating the NexusBridge project:
 
 ![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/Arch-NexusBridge.png)
 
-[View fullscreen](https://github.com/samarabdelhameed/pics/blob/main/Arch-NexusBridge.png) 
-
-https://github.com/samarabdelhameed/pics/blob/main/Arch-NexusBridge.png
-
 #### Vision:
 **NexusBridge** revolutionizes the digital service landscape by bridging web2 and web3, enabling a more open, collaborative internet. This empowers developers to create invaluable apps, blending the features of both worlds.
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/vision.png)
 
 #### Description:
 
@@ -26,8 +23,12 @@ https://github.com/samarabdelhameed/pics/blob/main/Arch-NexusBridge.png
 - Integrating ChatGPT capabilities within the NFT space.
 - Combining the efficiency of Poseidon Hash with Roll-up technologies.
 
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/description%201.png)
+
+
 ##### **How NexusBridge Works**
 Imagine a situation where each node runs identical deterministic JavaScript code, activated by a transaction. The outcomes are concurrently uploaded to the blockchain and verified by a smart contract. Within this context, the web2 logic, represented by JavaScript, is executed and validated in alignment with web3's decentralization principles.
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/process.png)
 
 ###### Process:
 1. **Register**: Begin by registering your web2 code. Ensure it's written in JavaScript.
@@ -54,6 +55,9 @@ Highlighted features include:
 - **Enhanced Encryption**: By employing TEE nodes, users can transmit encrypted private data with confidence. While the original data remains concealed from prying eyes, the TEE can process this information, derive results, and subsequently upload the outcomes to the designated blockchain.
 
 ##### **Applications**
+
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/Y6DH1BfjBBiCnrpH773YDB.png)
+
 **NexusBridge**'s fusion of web2 and web3 unlocks pioneering possibilities:
 
 - **Telegram Nexus Bot**: Project registration on **NexusBridge** is made smooth via the 'NexusBridge-mother' bot.
@@ -61,12 +65,13 @@ Highlighted features include:
 - **Intelligent NFT**: Intelligent NFTs (iNFTs) let blockchain enthusiasts converse with off-chain ChatGPT bots within the blockchain environment. **NexusBridge** serves as a linchpin, incorporating tools like ChatGPT and generative AIs into this decentralized framework.
 
 ##### **Integration with Archway**
+
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/intgratios2.png)
 **NexusBridge**, operating on the Archway platform, enables rewards for web2 activities based on transactions. With **NexusBridge**, ARCH emerges as a universal asset for web2, web3, and hybrid applications.
 
 ##### **Research Endeavors**
 **NexusBridge** is more than just a tech product. It's a movement aiming to unite centralized and decentralized digital landscapes, thereby unlocking a realm of innovations. Notable research supporting **NexusBridge**'s vision includes:
 
-- **BRAIN** exemplifies merging AI with blockchain. [Link to research](https://arxiv.org/abs/2305.04062)
-- **Zero-knowledge Address Abstraction (zkAA)** handles web2 identities on the blockchain. [Link to research](https://eprint.iacr.org/2023/191)
+
 
 With **NexusBridge**, the future of digital services is now, bridging the gap between web2 and web3 for a more open, collaborative, and innovative internet.
