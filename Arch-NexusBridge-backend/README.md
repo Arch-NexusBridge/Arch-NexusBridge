@@ -1,4 +1,6 @@
-# TL;DR
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/rr.png)
+
+### TL;DR
 
 ```bash
 $ docker-compose up -d --build
@@ -16,11 +18,15 @@ $ node src/relay/send.js
 
 ---
 
-# Counter Service
+### Counter Service
+
+Start the counter service to track epochs, rounds, and seeds.
 
 ```bash
 $ node src/global/counter.js
 ```
+
+Check the epoch, round, and seed values:
 
 ```bash
 $ curl http://localhost:30328/epoch
@@ -33,16 +39,21 @@ $ curl http://localhost:30328/seed
 {"seed":"1bd4c2ec750458404795bc011361551f35c3ab7c1b924f3a23ceb853269cdcd8"}
 ```
 
+---
 
-# APP Service
+### APP Service
 
-### VRF
+#### VRF (Verifiable Random Function)
+
+Set up the VRF service:
 
 ```bash
 $ export PK=[YOUR_PRIVATE_KEY_HERE]
 
 $ node src/node/vrf.js
 ```
+
+Evaluate and verify data using VRF:
 
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -d '{"data":"[DATA]"}' http://localhost:30327/evaluate
@@ -52,7 +63,9 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"publicKey":"042fbe3319c
 {"result":true}
 ```
 
-### APP
+#### APP
+
+Set up the APP service:
 
 ```bash
 $ export PK=[YOUR_PRIVATE_KEY_HERE]
@@ -60,20 +73,27 @@ $ export PK=[YOUR_PRIVATE_KEY_HERE]
 $ node src/node/app.js
 ```
 
+---
 
-# Relay Service
+### Relay Service
 
-### DB
+#### DB
+
+Start the database service:
 
 ```bash
 $ docker-compose up -d --build
 ```
 
-### Receive (From user)
+#### Receive (From user)
+
+Start the receive relay service:
 
 ```bash
 $ node src/relay/receive.js
 ```
+
+Submit a request to the relay service:
 
 ```bash
 $ curl -X POST -H "Content-Type: application/json" -d '{"uri":"https://raw.githubusercontent.com/D3LAB-DAO/Arch-NexusBridge-backend/main/examples/simple_addition.js", "params": {"a": 5, "b": 3}, "deadline": 2000000000000}' http://localhost:30329/request
@@ -81,7 +101,9 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"uri":"https://raw.githu
 {"result":8}
 ```
 
-### Send (From Provider)
+#### Send (From Provider)
+
+Start the send relay service:
 
 ```bash
 $ node src/relay/send.js
@@ -89,9 +111,11 @@ $ node src/relay/send.js
 
 ---
 
-# Test
+### Test
 
-### Test VRF
+#### Test VRF
+
+Run tests for the VRF module:
 
 ```bash
 $ export PK=[YOUR_PRIVATE_KEY_HERE]
@@ -99,31 +123,10 @@ $ export PK=[YOUR_PRIVATE_KEY_HERE]
 $ npm test test/vrf.test.js
 ```
 
-### Test VM
+#### Test VM
+
+Run tests for the VM module:
 
 ```bash
 $ npm test test/app.test.js
 ```
-
-
-<!--
-# Examples
-
-```bash
-$ curl -X POST -H "Content-Type: application/json" -d '{"url":"https://raw.githubusercontent.com/D3LAB-DAO/Arch-NexusBridge-backend/main/examples/simple_addition.js", "inputParameters": {"a": 5, "b": 3}}' http://localhost:3000/run
-
-{"result":8}
-```
-
-```bash
-$ curl -X POST -H "Content-Type: application/json" -d '{"url":"https://raw.githubusercontent.com/D3LAB-DAO/Arch-NexusBridge-backend/main/examples/circle_area.js", "inputParameters": {"radius": 5}}' http://localhost:3000/run
-
-{"result":78.53981633974483}
-```
-
-```bash
-$ curl -X POST -H "Content-Type: application/json" -d '{"url":"https://raw.githubusercontent.com/D3LAB-DAO/Arch-NexusBridge-backend/main/examples/chat.js", "inputParameters": {"prompt": "Hello", "key": "<YOUR_API_KEY>"}}' http://localhost:3000/run
-
-{"result":"! How can I assist you today?"}
-```
--->
