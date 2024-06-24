@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js, ts,jsx,tsx}"],
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
     screens: {
       sm: "640px",
@@ -90,7 +90,12 @@ module.exports = {
       white: "#FFFFFF",
       black: "#000000",
     },
-    extend: {},
+    extend: {
+      colors: {
+        dark: "#0A0C1A",
+        mintGreen: "#98FF98", // Added mint green color
+      },
+    },
   },
   variants: {
     accessibility: ["responsive", "focus-within", "focus"],

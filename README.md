@@ -1,6 +1,7 @@
 ### Project Name: **NexusBridge**
 
 ### Full Description:
+![NexusBridge Sequence Diagram](https://github.com/samarabdelhameed/pics/blob/main/gg.png)
 
 #### Introduction:
 In an era where web2's robust features and web3's secure decentralization were evolving independently, we recognized the immense potential of merging these two innovative worlds. Our vision is to create **NexusBridge**, a bridge seamlessly connecting web2 and web3, empowering developers to create invaluable applications that blend the best features of both realms.

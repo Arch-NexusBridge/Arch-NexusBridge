@@ -85,7 +85,6 @@ const Header = () => {
       <UploadFileModal />
       <div className="p-5 flex justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="" alt="LOGO" width={50} height={50} />
           <p className="text-white font-bold text-2xl ml-2">NexusBridge</p>
         </Link>
 
